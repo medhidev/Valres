@@ -21,7 +21,7 @@ Pour la réalisation de se projet nouv avons utiliser différents outils tel que
 * [Google Drive (Présentation et organisation du projet)](https://drive.google.com/drive/u/0/folders/121mjYQHs0nWQcSHkOnCZbqGGbYq6VKWJ)
 
 Plus orienté vers le code Java
-* JavaFX / Java Builder
+* Windows Builder (Package pour faire des GUI)
 * [Sérialisation](https://igm.univ-mlv.fr/~chilowi/lectures/content/java/cours/storage/serialization.std.html)
 
 ## Cahier des charges (Site Intranet)
