@@ -6,6 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.filechooser.FileNameExtensionFilter;
+
+import fr.btssio.app.Reservation;
+
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 
@@ -19,6 +22,7 @@ public class JFValresApp extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	private String pathFile, nameFile;
 
 	/**
 	 * Launch the application.
@@ -53,7 +57,10 @@ public class JFValresApp extends JFrame {
 		
 		JButton btn_generer = new JButton("Generate");
 		btn_generer.addActionListener(new ActionListener() {
+			// Générer le PDF
 			public void actionPerformed(ActionEvent e) {
+				Reservation reserv = new Reservation();
+				reserv.generatePDF(pathFile);
 			}
 		});
 		
@@ -76,8 +83,13 @@ public class JFValresApp extends JFrame {
 				
 				if (returnValue == JFileChooser.APPROVE_OPTION) {
 					// Fichier selectionner dans le Gestionnaire de fichier
-				    File selectedFile = fileChooser.getSelectedFile();
-				    String nameFile = selectedFile.getName();
+				    File selectedFile = fileChooser.getSelectedFile();  
+				    nameFile = selectedFile.getName();
+				    pathFile = selectedFile.getPath();
+				    
+				    JLabel lbl_select_file = new JLabel(nameFile);
+					lbl_select_file.setBounds(129, 105, 46, 14);
+					contentPane.add(lbl_select_file);
 				}
 			}
 		});
@@ -85,8 +97,8 @@ public class JFValresApp extends JFrame {
 		btn_select_xml.setBounds(94, 71, 117, 23);
 		contentPane.add(btn_select_xml);
 		
-		JLabel lbl_select_file = new JLabel("");
-		lbl_select_file.setBounds(129, 105, 46, 14);
-		contentPane.add(lbl_select_file);
+//		JLabel lbl_select_file = new JLabel((String)nameFile);
+//		lbl_select_file.setBounds(129, 105, 46, 14);
+//		contentPane.add(lbl_select_file);
 	}
 }

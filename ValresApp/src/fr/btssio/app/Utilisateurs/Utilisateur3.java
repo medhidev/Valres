@@ -1,4 +1,4 @@
-package fr.btssio.app;
+package fr.btssio.app.Utilisateurs;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,21 +12,13 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-public class Salle {
-	
-	private int id_salle;
-	private String nom_salle;
-	private int categorie;
-	private String libelle_categorie;
-	private int id_categorie;
-	
-	public Salle(int id_salle, String nom_salle, int categorie, String libelle_categorie, int id_categorie) {
-		super();
-		this.id_salle = id_salle;
-		this.nom_salle = nom_salle;
-		this.categorie = categorie;
-		this.libelle_categorie = libelle_categorie;
-		this.id_categorie = id_categorie;
+import fr.btssio.app.Utilisateur;
+
+public class Utilisateur3 extends Utilisateur{
+
+	public Utilisateur3(String nom, String prenom, String id_utilisateur, int id_structure, String nom_structure,
+			String email, String adresse_structure) {
+		super(nom, prenom, id_utilisateur, id_structure, nom_structure, email, adresse_structure);
 		
 		try {
 			
@@ -42,7 +34,7 @@ public class Salle {
 		          Element reservation = (Element) reservationList.item(i);
 		          String id = reservation.getAttribute("id");
 		
-		          if ("1".equals(id)) {
+		          if ("3".equals(id)) {
 		        	  
 		          	  // Contenu XML
 		              nom = reservation.getElementsByTagName("nom").item(0).getTextContent();
@@ -55,10 +47,8 @@ public class Salle {
 		          }
 		      }
 		  } catch (ParserConfigurationException | SAXException | IOException e) {
-		  	
-		  	System.out.println("dans le catch");
 		      e.printStackTrace();
 		  }
 	}
-	
+
 }

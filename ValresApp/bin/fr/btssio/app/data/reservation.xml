@@ -18,7 +18,7 @@
         
  		<reservation id="2">
             <utilisateur_id>6</utilisateur_id>
-             <nom>ZUEL</nom>
+            <nom>ZUEL</nom>
             <prenom>STEPHANIE</prenom>
             <structure_id>7</structure_id>
             <structure_nom>Fives Nordon</structure_nom>
