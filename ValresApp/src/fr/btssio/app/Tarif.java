@@ -51,9 +51,9 @@ public class Tarif {
 			case 1:
 				total_price += calculTTC(1055.5);
 			case 2:
-				total_price += calculTTC(1055.5);
+				total_price += calculTTC(1530.8);
 			case 3:
-				total_price += calculTTC(1055.5);
+				total_price += calculTTC(1455.5);
 			}
 		}
 		

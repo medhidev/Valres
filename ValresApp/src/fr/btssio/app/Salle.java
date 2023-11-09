@@ -42,17 +42,7 @@ public class Salle {
 		          Element reservation = (Element) reservationList.item(i);
 		          String id = reservation.getAttribute("id");
 		
-		          if ("1".equals(id)) {
-		        	  
-		          	  // Contenu XML
-		              nom = reservation.getElementsByTagName("nom").item(0).getTextContent();
-		              prenom = reservation.getElementsByTagName("prenom").item(0).getTextContent();
-		              id_utilisateur = reservation.getElementsByTagName("utilisateur_id").item(0).getTextContent();
-		              nom_structure = reservation.getElementsByTagName("structure_nom").item(0).getTextContent();
-		              email = reservation.getElementsByTagName("mail").item(0).getTextContent();
-		              adresse_structure = reservation.getElementsByTagName("structure_adresse").item(0).getTextContent();
-		              
-		          }
+		          
 		      }
 		  } catch (ParserConfigurationException | SAXException | IOException e) {
 		  	
